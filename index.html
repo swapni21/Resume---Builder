@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <h1>Resume Builder</h1>
+    <form id="resume-form" type="submit">
+        <h2>Personal Information</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" required><br>
+
+        <h2>Educational Background</h2>
+        <div id="education-entries">
+            <div class="education-entry">
+                <label for="university">University:</label>
+                <input type="text" class="university" required>
+                <label for="degree">Degree:</label>
+                <input type="text" class="degree" required>
+                <label for="grad-year">Graduation Year:</label>
+                <input type="text" class="grad-year" required>
+            </div>
+        </div>
+        <button type="button" id="add-education">Add Education</button>
+
+        <h2>Work Experience</h2>
+        <div id="work-entries">
+            <div class="work-entry">
+                <label for="company">Company:</label>
+                <input type="text" class="company" required>
+                <label for="position">Position:</label>
+                <input type="text" class="position" required>
+                <label for="duration">Duration:</label>
+                <input type="text" class="duration" required>
+            </div>
+        </div>
+        <button type="button" id="add-work">Add Work Experience</button>
+
+        <h2>Skills</h2>
+        <div id="skills-entries">
+            <div class="skill-entry">
+                <label for="tools">Tools:</label>
+                <input type="text" class="tools" required>
+                <label for="programming-languages">Programming Languages:</label>
+                <input type="text" class="programming-languages" required>
+            </div>
+        </div>
+        <button type="button" id="add-skill">Add Skill</button>
+        <br>
+
+        <button type="submit" id="generate-resume">Generate Resume</button>
+    </form>
+
+    <div id="resume-section" style="display: none;">
+        <div id="resume">
+        </div>
+        <button type="button" id="back-to-form">Back to Form</button>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
